@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "noti-toasti-windows",
+  "version": "0.1.0",
+  "description": "Windows toast banner notifications with sound for Claude Code when user input is needed or notifications are triggered (supports Windows and WSL).",
+  "author": {
+    "name": "Imran Shaikh",
+    "email": "imran@coderstea.in"
+  },
+  "homepage": "https://github.com/shaikh-imran/s10i-claude-plugins",
+  "repository": "https://github.com/shaikh-imran/s10i-claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "notification",
+    "toast",
+    "windows",
+    "wsl",
+    "powershell",
+    "claude-code"
+  ],
+  "hooks": "./hooks/hooks.json"
+}
