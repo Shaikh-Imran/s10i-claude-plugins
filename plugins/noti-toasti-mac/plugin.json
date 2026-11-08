@@ -1,0 +1,24 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "noti-toasti-mac",
+  "version": "0.1.0",
+  "description": "macOS native banner notifications with sound and agent context (name and path) for Claude Code when user input is needed or notifications are triggered.",
+  "author": {
+    "name": "Imran Shaikh",
+    "email": "imran@coderstea.in"
+  },
+  "homepage": "https://github.com/shaikh-imran/s10i-claude-plugins",
+  "repository": "https://github.com/shaikh-imran/s10i-claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "notification",
+    "macos",
+    "mac",
+    "toast",
+    "banner",
+    "sound",
+    "agent",
+    "claude-code"
+  ],
+  "hooks": "./hooks/hooks.json"
+}

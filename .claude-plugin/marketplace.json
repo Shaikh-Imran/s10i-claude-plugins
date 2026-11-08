@@ -20,6 +20,17 @@
       },
       "source": "./plugins/noti-toasti-windows",
       "category": "productivity"
+    },
+    {
+      "name": "noti-toasti-mac",
+      "description": "Native macOS banner notifications with sound for Claude Code when user input is needed or notifications are triggered, including agent name and path context",
+      "version": "0.1.0",
+      "author": {
+        "name": "Imran Shaikh",
+        "email": "imran@coderstea.in"
+      },
+      "source": "./plugins/noti-toasti-mac",
+      "category": "productivity"
     }
   ]
 }
