@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "s10i-claude-plugins",
+  "description": "Collection of Claude plugins by Imran Shaikh (@shaikh-imran)",
+  "owner": {
+    "name": "Imran Shaikh",
+    "email": "imran@coderstea.in"
+  },
+  "metadata": {
+    "version": "0.0.1"
+  },
+  "plugins": [
+  ]
+}
