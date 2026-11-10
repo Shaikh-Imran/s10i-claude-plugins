@@ -1,4 +1,5 @@
 # Shows a Windows toast for Claude Code Notification hook events. Reads hook JSON on stdin.
+param([string]$Distro = '')
 $ErrorActionPreference = 'SilentlyContinue'
 
 $data = $null
@@ -12,8 +13,15 @@ if ($sid.Length -gt 8) { $sid = $sid.Substring(0, 8) }
 # Session name (set via /rename or --name) lives in the transcript as the last custom-title entry.
 $sessionName = ''
 if ($data -and $data.session_name) { $sessionName = [string]$data.session_name }
-elseif ($data -and $data.transcript_path -and (Test-Path -LiteralPath $data.transcript_path)) {
-    $m = Select-String -LiteralPath $data.transcript_path -Pattern '"type":"custom-title"' -SimpleMatch | Select-Object -Last 1
+elseif ($data -and $data.transcript_path){
+  $tp = [string]$data.transcript_path
+  # under WSL the payload holds a Linux path; map it to the \\ wsl.localhost share so Windows can read it.
+  if ($Distro -and $tp -and $tp.StartsWith('/')) {
+    $tp = "\\wsl.localhost\$Distro" + $tp.Replace('/', '\')
+  }
+}
+if (-not $sessionName -and $tp -and (Test-Path -LiteralPath $tp)) {
+    $m = Select-String -LiteralPath $tp -Pattern '"type":"custom-title"' -SimpleMatch | Select-Object -Last 1
     if ($m) { try { $sessionName = [string]($m.Line | ConvertFrom-Json).customTitle } catch {} }
 }
 

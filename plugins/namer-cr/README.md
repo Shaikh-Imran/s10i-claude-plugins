@@ -1,63 +1,45 @@
 # namer-cr
 
-A [Claude Code](https://claude.ai/code) plugin that prompts you to name your session and choose a chat color on startup.
+Prompts you to name your Claude Code session and pick a chat color on startup.
 
----
+Suggests names based on the current git branch and folder name.
 
 ## Features
 
-- 🏷️ **Automatic Session Naming**: Automatically prompts you to name your session upon startup or when resuming an unnamed session.
-- 🌿 **Git Branch Awareness**: Smart naming suggestions incorporating your git branch and working directory folder name.
-- 🎨 **Chat Color Customization**: Easily pick a vibrant chat color (`red`, `blue`, `green`, `yellow`, `purple`, `orange`, `pink`, `cyan`) or randomize it.
-- ⚡ **Seamless Integration**: Hooks directly into Claude Code's session lifecycle using TypeScript/JSX hook modules.
+- 🏷️ Prompts for a session name on startup or when resuming an unnamed session
+- 🌿 Git-branch-aware name suggestions (e.g. `myproject-feature-xyz`)
+- 🎨 Chat color picker — choose from `red`, `blue`, `green`, `yellow`, `purple`, `orange`, `pink`, `cyan`, or randomize
+- ⚡ Non-blocking — runs after session start, never delays startup
 
----
+## Install
 
-## Installation
+```bash
+/plugin marketplace add shaikh-imran/s10i-claude-plugins
+/plugin install namer-cr@s10i-claude-plugins
+```
 
-### Via Marketplace
-
-1. Add the marketplace to Claude Code:
-   ```bash
-   /plugin marketplace add shaikh-imran/s10i-claude-plugins
-   ```
-
-2. Install the plugin:
-   ```bash
-   /plugin install namer-cr@s10i-claude-plugins
-   ```
-
-### Local / Development
-
-To install or test directly from this repository:
+Local:
 ```bash
 /plugin install ./plugins/namer-cr
 ```
 
----
-
 ## How It Works
 
-1. When a new session starts (`session.start`), the plugin checks if a session title is needed.
-2. It detects the current git branch and folder name to offer smart naming options.
-3. It uses Claude Code's interactive UI (`$.ui.ask`) to let you pick a session name.
-4. It executes the built-in `/rename` command with your chosen name.
-5. It then prompts you to choose a chat color and runs the `/color` command.
-
----
+1. On `session.start`, checks if the session needs a name.
+2. Detects the git branch and folder name to build suggestions.
+3. Uses `$.ui.ask` to let you pick or type a name.
+4. Runs `/rename` with your choice.
+5. Prompts for a chat color and runs `/color`.
 
 ## File Structure
 
-```text
-namer-cr/
-├── .claude-plugin/
-│   └── plugin.json                     # Plugin manifest
-└── hooks/
-    ├── hooks.json                      # Hook configuration
-    └── register.tsx                    # Session start hook module
 ```
-
----
+namer-cr/
+├── .claude-plugin/plugin.json
+└── hooks/
+    ├── hooks.json
+    └── register.tsx
+```
 
 ## License
 

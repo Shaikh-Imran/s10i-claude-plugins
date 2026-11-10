@@ -1,77 +1,49 @@
 # noti-toasti-windows
 
-A [Claude Code](https://claude.ai/code) plugin that generates native Windows Toast (Banner) notifications with audio alerts whenever Claude Code requires user input, permission, or wants to notify you.
+Native Windows toast notifications with sound when Claude Code needs your attention.
 
-Designed specifically for **Windows** and **WSL (Windows Subsystem for Linux)**.
-
----
+Works on both Windows and WSL.
 
 ## Features
 
-- 🔔 **Native Windows Toast Notifications**: Displays Windows 10/11 banner notifications via the WinRT `ToastNotificationManager` API.
-- 🔊 **Sound Alert**: Plays the default Windows notification chime (`Notification.Default`).
-- 🐧 **WSL & Windows Compatible**: Seamlessly converts Linux paths inside WSL to Windows paths using `wslpath -w` and calls Windows `powershell.exe`.
-- 🏷️ **Context-Aware Titles**: Displays your project name and session name (set via `/rename` or `--name`) or session ID in the notification header.
-
----
+- 🔔 Windows 10/11 toast banners via WinRT `ToastNotificationManager`
+- 🔊 Default Windows notification sound
+- 🐧 WSL-compatible — auto-converts paths via `wslpath`
+- 🏷️ Shows project name and session title in the notification header
 
 ## Requirements
 
-- **Operating System**: Windows 10 / 11, or WSL (Ubuntu, Debian, openSUSE, etc. running on Windows).
-- **PowerShell**: `powershell.exe` available in the PATH.
+- Windows 10/11 or WSL
+- `powershell.exe` in PATH
 
----
+## Install
 
-## Installation
+```bash
+/plugin marketplace add shaikh-imran/s10i-claude-plugins
+/plugin install noti-toasti-windows@s10i-claude-plugins
+```
 
-### Via Marketplace
-
-1. Add the marketplace to Claude Code:
-   ```bash
-   /plugin marketplace add shaikh-imran/s10i-claude-plugins
-   ```
-
-2. Install the plugin:
-   ```bash
-   /plugin install noti-toasti-windows@s10i-claude-plugins
-   ```
-
-### Local / Development
-
-To install or test directly from this repository:
+Local:
 ```bash
 /plugin install ./plugins/noti-toasti-windows
 ```
 
----
-
 ## How It Works
 
-1. Claude Code triggers the `Notification` hook event whenever user attention is needed (e.g. tool permission requests or idle state).
-2. The hook executes:
-   ```bash
-   p="${CLAUDE_PLUGIN_ROOT}/scripts/noti-toasti-windows.ps1"; command -v wslpath >/dev/null 2>&1 && p="$(wslpath -w "$p")"; powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$p"
-   ```
-3. If running in WSL, `wslpath -w` translates the script path to Windows format (e.g., `\\wsl$\...`).
-4. `powershell.exe` reads the JSON event payload from `stdin`, extracts the project directory, session ID, and session title, and displays a native WinRT toast notification with sound.
-
----
+1. Claude Code fires the `Notification` hook when user input is needed.
+2. The hook runs the PowerShell script, translating paths via `wslpath` if in WSL.
+3. PowerShell reads the JSON payload from stdin, extracts project/session info.
+4. Displays a native WinRT toast notification with sound.
 
 ## File Structure
 
-```text
+```
 noti-toasti-windows/
-├── .claude-plugin/
-│   └── plugin.json                     # Plugin manifest
-├── hooks/
-│   └── hooks.json                      # Hook configuration for Claude Code
-├── hook.json                           # Hook definition
-├── scripts/
-│   └── noti-toasti-windows.ps1         # PowerShell toast notification script
+├── .claude-plugin/plugin.json
+├── hooks/hooks.json
+├── scripts/noti-toasti-windows.ps1
 └── README.md
 ```
-
----
 
 ## License
 
