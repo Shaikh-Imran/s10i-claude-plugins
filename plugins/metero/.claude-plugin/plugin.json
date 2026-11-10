@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "metero",
+  "version": "0.1.0",
+  "description": "Claude Mod showing context meter above the input in Claude Code with token usage and cost in USD",
+  "author": {
+    "name": "Imran Shaikh",
+    "email": "imran@coderstea.in"
+  },
+  "homepage": "https://github.com/shaikh-imran/s10i-claude-plugins",
+  "repository": "https://github.com/shaikh-imran/s10i-claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "context",
+    "meter",
+    "tokens",
+    "cost",
+    "mod",
+    "ui",
+    "claude-code"
+  ],
+  "hooks": "./hooks/hooks.json"
+}

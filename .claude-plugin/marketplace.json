@@ -7,7 +7,7 @@
     "email": "imran@coderstea.in"
   },
   "metadata": {
-    "version": "0.0.1"
+    "version": "0.0.2"
   },
   "plugins": [
     {
@@ -30,6 +30,28 @@
         "email": "imran@coderstea.in"
       },
       "source": "./plugins/noti-toasti-mac",
+      "category": "productivity"
+    },
+    {
+      "name": "metero",
+      "description": "Claude Mod showing context meter above the input in Claude Code with token usage and cost in USD",
+      "version": "0.1.0",
+      "author": {
+        "name": "Imran Shaikh",
+        "email": "imran@coderstea.in"
+      },
+      "source": "./plugins/metero",
+      "category": "productivity"
+    },
+    {
+      "name": "namer-cr",
+      "description": "Asks for the session name and assigns a random color on startup in Claude Code",
+      "version": "0.1.0",
+      "author": {
+        "name": "Imran Shaikh",
+        "email": "imran@coderstea.in"
+      },
+      "source": "./plugins/namer-cr",
       "category": "productivity"
     }
   ]

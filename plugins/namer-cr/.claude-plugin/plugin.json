@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "namer-cr",
+  "version": "0.1.0",
+  "description": "Asks for the session name and assigns a random color on startup",
+  "author": {
+    "name": "Imran Shaikh",
+    "email": "imran@coderstea.in"
+  },
+  "homepage": "https://github.com/shaikh-imran/s10i-claude-plugins",
+  "repository": "https://github.com/shaikh-imran/s10i-claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "name",
+    "color",
+    "session",
+    "rename",
+    "mod",
+    "claude-code"
+  ],
+  "hooks": "./hooks/hooks.json"
+}

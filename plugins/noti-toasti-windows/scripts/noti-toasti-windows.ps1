@@ -18,7 +18,7 @@ elseif ($data -and $data.transcript_path -and (Test-Path -LiteralPath $data.tran
 }
 
 $label = if ($sessionName) { $sessionName } else { $sid }
-$title = "Claude Code" + if ($label) { " [$label]" } else { '' }
+$title = "Claude Code" + $(if ($label) { " [$label]" } else { '' })
 $body = "Claude At $projectName ($cwd)"
 
 Function Esc([string]$s) { [System.Security.SecurityElement]::Escape($s) }
@@ -32,5 +32,5 @@ $toastXml = '<toast><visual><binding template="ToastGeneric">' +
 $xml = New-Object Windows.Data.Xml.Dom.XmlDocument
 $xml.LoadXml($toastXml)
 $toast = [Windows.UI.Notifications.ToastNotification]::new($xml)
-$appId = 'powershell.exe'
+$appId = '{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\WindowsPowerShell\v1.0\powershell.exe'
 [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier($appId).Show($toast)
