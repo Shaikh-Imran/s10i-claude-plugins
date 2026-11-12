@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "ai-no",
+  "version": "0.1.0",
+  "description": "Removes AI writing patterns and corporate filler from text, rewriting it into direct, natural, human prose while preserving meaning and facts.",
+  "author": {
+    "name": "Imran Shaikh",
+    "email": "imran@coderstea.in"
+  },
+  "homepage": "https://github.com/shaikh-imran/s10i-claude-plugins",
+  "repository": "https://github.com/shaikh-imran/s10i-claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "ai-no",
+    "aino",
+    "unslop",
+    "simplify",
+    "no-ai",
+    "humanizer",
+    "prose",
+    "writing",
+    "plugin",
+    "claude-code"
+  ]
+}

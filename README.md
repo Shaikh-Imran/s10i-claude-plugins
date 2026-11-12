@@ -10,10 +10,9 @@
 /plugin marketplace add shaikh-imran/s10i-claude-plugins
 ```
 
-### Clone and Add via Local Path
+### Alternate way to Add this Marketplace
 
-> [!NOTE]
-> If for any reason scripts or direct GitHub pulls are blocked, you can clone the repository and pass the local path directly to the `marketplace add` command.
+Clone and Add via Local Path. This can be useful if you want to make changes to the plugins or if you are behind a firewall.
 
 ```bash
 git clone https://github.com/shaikh-imran/s10i-claude-plugins.git
@@ -33,6 +32,7 @@ git clone https://github.com/shaikh-imran/s10i-claude-plugins.git
 | [`noti-toasti-windows`](./plugins/noti-toasti-windows) | Native Windows toast notifications with sound when Claude Code needs attention — supports WSL | Windows / WSL | `/plugin install noti-toasti-windows@s10i-claude-plugins` |
 | [`metero`](./plugins/metero) | Live context meter above the prompt — tokens, cost, model, and rate limits with a color-coded bar | Any | `/plugin install metero@s10i-claude-plugins` |
 | [`namer-cr`](./plugins/namer-cr) | Prompts for a session name (git-branch-aware) and chat color on startup | Any | `/plugin install namer-cr@s10i-claude-plugins` |
+| [`ai-no`](./plugins/ai-no) | Removes AI writing patterns and corporate filler from text, rewriting it into direct, natural prose | Any | `/plugin install ai-no@s10i-claude-plugins` |
 
 ---
 
@@ -77,6 +77,16 @@ On startup, prompts you to name the session and pick a chat color. Suggests name
 ```
 
 → [Docs](./plugins/namer-cr/README.md)
+
+### [ai-no](./plugins/ai-no)
+
+A skill that Removes AI writing patterns, empty corporate buzzwords, and robotic phrasing from text. Rewrites prose (PRs, documentation, emails, messages) to sound direct and human while preserving all factual content, code, and identifiers.
+
+```bash
+/plugin install ai-no@s10i-claude-plugins
+```
+
+→ [Docs](./plugins/ai-no/README.md)
 
 ---
 

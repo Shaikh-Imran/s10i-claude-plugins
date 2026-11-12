@@ -7,7 +7,7 @@
     "email": "imran@coderstea.in"
   },
   "metadata": {
-    "version": "0.0.2"
+    "version": "0.3.0"
   },
   "plugins": [
     {
@@ -52,6 +52,17 @@
         "email": "imran@coderstea.in"
       },
       "source": "./plugins/namer-cr",
+      "category": "productivity"
+    },
+    {
+      "name": "ai-no",
+      "description": "Skill. Removes AI writing patterns and corporate filler from text, rewriting it into direct, natural, human prose",
+      "version": "0.1.0",
+      "author": {
+        "name": "Imran Shaikh",
+        "email": "imran@coderstea.in"
+      },
+      "source": "./plugins/ai-no",
       "category": "productivity"
     }
   ]
