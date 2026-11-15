@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/icon-1.png" alt="s10i-claude-plugin-icon" width="360" />
+</p>
+
 # s10i-claude-plugins
 
 [Claude Code](https://claude.ai/code) plugins by **Imran Shaikh** ([@Shaikh-Imran](https://github.com/shaikh-imran)).
