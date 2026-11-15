@@ -1,16 +1,20 @@
-<p align="center">
+<div align="center">
   <img src="assets/icon-1.png" alt="s10i-claude-plugin-icon" width="360" />
-</p>
 
-# s10i-claude-plugins
+  <h1>s10i-claude-plugins</h1>
 
-[![Version](https://img.shields.io/badge/version-0.3.0-blue.svg)](./CHANGELOG.md)
-[![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-6B4FBB?logo=anthropic&logoColor=white)](https://claude.ai/code)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
-[![Plugins](https://img.shields.io/badge/plugins-5-orange.svg)](#available-plugins)
-[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-lightgrey.svg)](#available-plugins)
+  <p>
+    <a href="./CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.3.0-blue.svg" alt="Version" /></a>
+    <a href="https://claude.ai/code"><img src="https://img.shields.io/badge/Claude_Code-Plugin-6B4FBB?logo=anthropic&logoColor=white" alt="Claude Code Plugin" /></a>
+    <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License: MIT" /></a>
+    <a href="#available-plugins"><img src="https://img.shields.io/badge/plugins-5-orange.svg" alt="Plugins" /></a>
+    <a href="#available-plugins"><img src="https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-lightgrey.svg" alt="Platform" /></a>
+  </p>
 
-[Claude Code](https://claude.ai/code) plugins by **Imran Shaikh** ([@Shaikh-Imran](https://github.com/shaikh-imran)).
+  <p>
+    <a href="https://claude.ai/code">Claude Code</a> plugins by <b>Imran Shaikh</b> (<a href="https://github.com/shaikh-imran">@Shaikh-Imran</a>).
+  </p>
+</div>
 
 ---
 
