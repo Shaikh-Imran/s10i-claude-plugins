@@ -4,7 +4,29 @@
 
 # s10i-claude-plugins
 
+[![Version](https://img.shields.io/badge/version-0.3.0-blue.svg)](./CHANGELOG.md)
+[![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-6B4FBB?logo=anthropic&logoColor=white)](https://claude.ai/code)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![Plugins](https://img.shields.io/badge/plugins-5-orange.svg)](#available-plugins)
+[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-lightgrey.svg)](#available-plugins)
+
 [Claude Code](https://claude.ai/code) plugins by **Imran Shaikh** ([@Shaikh-Imran](https://github.com/shaikh-imran)).
+
+---
+
+## Table of Contents
+
+- [Adding this Marketplace](#adding-this-marketplace)
+  - [Alternate way to Add this Marketplace](#alternate-way-to-add-this-marketplace)
+- [Available Plugins](#available-plugins)
+- [Plugin Details](#plugin-details)
+  - [noti-toasti-mac](#noti-toasti-mac)
+  - [noti-toasti-windows](#noti-toasti-windows)
+  - [metero](#metero)
+  - [namer-cr](#namer-cr)
+  - [ai-no](#ai-no)
+- [Changelog](#changelog)
+- [License](#license)
 
 ---
 
